@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+        let n = +prompt(`nhap 1 so tinh binh phuong`)
+        function binhPhuong(a) {
+            let tich = 1
+            tich = a * a
+            return tich
+
+        }
+        console.log(`binh phuong cua ${n} la: ` + binhPhuong(n));
+    </script> -->
+
+    <!-- <script>
+        // Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn.Gọi hàm vừa xây dựng được.
+        let r = parseInt(prompt(`nhap ban kinh r la`))
+        function chuViDienTich(r) {
+            let chuvi = r * 2 * Math.PI
+            let dientich = Math.PI * r * r
+            return [chuvi, dientich]
+        }
+        console.log(chuViDienTich(r).join);
+    </script> -->
+
+    <!-- <script>
+        // Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào.Gọi hàm vừa xây dựng được.??
+        let n = parseInt(prompt(`nhap so giai thua can tinh:`))
+        function giaiThua(a) {
+            let sum = 1
+            for (let i = 1; i <= a; i++) {
+                sum = sum * i
+            }
+            return sum
+        }
+        console.log(`ket qua cua ${n}! la:` + giaiThua(n));
+    </script> -->
+
+
+    <!-- <script>
+        function kyTu(string) {
+            // return (string <= 0 || string > 0)
+            return !Object.is(parseInt(string), NaN)
+
+
+        }
+        console.log(kyTu("a"));
+    </script> -->
+
+    <!-- <script>
+        // Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+        function finMin(a, b, c) {
+            let min = a
+            if (b < min) {
+                min = b
+            }
+            if (c < min) {
+                min = c
+            }
+            return min
+        }
+        console.log(finMin(5, 4, 3));
+        </script> -->
+
+    <!-- <script>
+        // Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không.Nếu là nguyên dương trả về true, ngược lại trả về false.
+        function nguyenDuong(a) {
+            if (a > 0) {
+                return true
+            }
+            return false
+        }
+        console.log(nguyenDuong(-1));
+    </script> -->
+
+    <!-- <script>
+        // Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
+        function doiCho(a, b) {
+            let doi = a
+            a = b;
+            b = doi
+            return [a, b]
+        }
+        console.log(doiCho(3, 5).join(","));
+    </script> -->
+
+    <!-- <script>
+        function doiNguoc(a, b) {
+            return [a, b].reverse()
+        }
+        console.log(doiNguoc(3, 5));
+    </script> -->
+
+    <!-- <script>
+        // // Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+        // // Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về - 1.
+        // function kyTu(arr, b) {
+        //     let cout = 0
+        //     let flag = false
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if (arr[i] == b)
+        //             cout++
+        //         flag = true
+        //     }
+        //     if (flag) {
+        //         return cout
+        //     } else {
+        //         return -1
+        //     }
+        // }
+        // console.log(kyTu(["a", "c", "a", "a"], "a"));
+
+        function kyTu(arr, a) {
+            let cout = 0
+            let flag = false
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == a) {
+                    flag = true
+                    cout++
+                }
+            } if (flag) {
+                return cout;
+            } else {
+                return -1
+            }
+        }
+        console.log(kyTu(["a", "b", "c", "d", "a", "a"], "a"));
+    </script> -->
+
+    <!-- <script>
+        // Bài 1: Viết chương trình tạo hàm tính tổng 2 số
+        let a = parseInt(prompt(`nhap so a:`))
+        let b = parseInt(prompt(`nhap so b`))
+        function sum(a, b) {
+            return (a + b)
+        }
+        console.log(`tong cua 2 so ${a}+${b}=` + sum(a, b));
+    </script> -->
+
+    <!-- <script>
+        // Bài 2: Viết chương trình tạo hàm tính diện tích và chu vi hình tròn
+        function dienTichChuVi(r) {
+            let dienTich = r * r * Math.PI
+            let chuVi = r * 2 * Math.PI
+            return [dienTich, chuVi]
+        }
+        console.log(dienTichChuVi(2));
+    </script> -->
+
+    <!-- <script>
+
+        // Bài 3: Viết chương trình tạo hàm kiểm tra xem ký tự nhập vào có phải ký tự số hay không ?
+        function kyTu(string) {
+            return !Object.is(parseInt(string), NaN)
+
+            // return (string >= 0 || string > 0)
+
+        }
+        console.log(kyTu("1"));
+    </script> -->
+
+    <!-- <script>
+        // Bài 4: Viết chương trình cho người dùng nhập vào một số,
+        //  kiểm tra xem số đưa vào có phải nguyên dương không ? Nếu đung trả vè true, sai trả về false
+        function soNguyenDuong(a) {
+            if (a > 0) {
+                return true
+
+            }
+            return false
+        }
+        console.log(soNguyenDuong(-3));
+    </script> -->
+
+    <!-- <script>
+        // Bài 5: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ 2 số nguyên đó
+        function doiCho(a, b) {
+            let c = a
+            a = b
+            b = c
+            return [a, b]
+        }
+        console.log(doiCho(2, 4));
+    </script> -->
+
+    <!-- <script>
+        // Bài 1: Viết chương trình cho người dùng nhập vào 3 số, viết hàm kiểm tra để tìm ra số bé nhất và in ra số đó
+        function finMin(a, b, c) {
+            let min = a
+            if (b < min) {
+                min = b
+            }
+            if (c < min) {
+                min = c
+            }
+            return min
+
+        }
+        console.log(finMin(2, 3, 1));
+    </script> -->
+
+    <!-- <script>
+        // Bài 2: Viết hàm kiểm tra xem số người dùng nhập vào có phải là số nguyên tố hay không ?
+
+        // (số nguyên tố là số nguyên dương chỉ có 2 ước là 1 và chính nó)
+        function soNt(a) {
+            let flag = false
+            if (a % 2 == 0) {
+                flag = true
+
+            }
+            if (!flag) {
+                return (`la so nt`)
+            } else {
+                return (`k la so nt`)
+            }
+        }
+        console.log(soNt(11));
+    </script> -->
+
+    <!-- <script>
+        //         Bài 3: Cho mảng sau:
+
+        // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        // Viết hàm trả về tất cả các cặp số có tổng bằng 10
+        function capMang(arr) {
+            let arr1 = []
+            for (let i = 1; i <= arr.length; i++) {
+                for (let j = 1; j <= arr.length; j++) {
+                    if (i + j === 10) {
+                        arr1.push([i, j])
+
+                    }
+                }
+
+            }
+            return arr1
+        }
+        console.log(capMang(arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+    </script> -->
+
+    <!-- <script>
+        function congMang(arr) {
+            let arr1 = []
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr.length; j++) {
+                    if (i + j === 10) {
+                        arr1.push([i, j])
+                    }
+                }
+            }
+            return arr1
+        }
+        console.log(congMang(arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+
+
+    </script> -->
+
+    <!-- <script>
+        function giaiThua(a) {
+            let tich = 1
+            for (let i = 1; i <= a; i++) {
+                tich *= i
+            }
+            return tich
+        }
+        console.log(giaiThua(10));
+    </script> -->
+
+    <!-- <script>
+        function tangDan(arr) {
+
+            for (i = 0; i < arr.length - 1; i++) {
+                for (j = 0; j < arr.length - 1 - i; j++) {
+                    if (arr[j] > arr[j + 1]) {//giảm dần đổi dấu > tăng dần
+                        //doi cho 2 phan tu neu chung k dung thuw tu
+                        let b = arr[j]
+                        arr[j] = arr[j + 1]
+                        arr[j + 1] = b
+                    }
+                }
+            }
+            return arr.join()
+        }
+        let tong = tangDan([9, 8, 7, 6, 5, 4, 3, 2, 1])
+        console.log(tong);
+    </script> -->
+
+
+
+
+
+    <!-- <script>
+        function namNhuan(year) {
+            if (year % 4 === 0 && year % 100 != 0 || year % 400 == 0) {
+                return true
+            }
+            return false
+        }
+        console.log(namNhuan(2028));
+    </script> -->
+    <!-- <script>
+        function tangDan(arr) {
+            for (let i = 0; i < arr.length - 1; i++) {
+                for (j = 0; j < arr.length - 1 - i; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        let a = arr[j]
+                        arr[j] = arr[j + 1]
+                        arr[j + 1] = a
+                    }
+                }
+            }
+            return arr.join(",")
+        }
+        tong = tangDan([9, 8, 7, 6, 5, 4, 3, 2, 1])
+        console.log(tong);
+    </script> -->
+    <!-- <script>
+        function tangDan(arr) {
+            for (let i = 0; i < arr.length - 1; i++) {
+                for (let j = 0; j < length - 1 - i; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        let a = arr[j]
+                        arr[j] = arr[j + 1]
+                        arr[j + 1] = a
+                    }
+                }
+            }
+            return arr.join(",")
+        }
+        let tong = tangDan(arr = [9, 8, 7, 6, 5, 4, 3, 2, 1])
+        console.log(tong);
+    </script> -->
+    <!-- <script>
+        function tangDan(arr) {
+            for (let i = 0; i < arr.length - 1; i++) {
+                for (j = 0; j < arr.length - 1 - i; j++) {
+                    if (arr[j] < arr[j + 1]) {
+                        let a = arr[j]
+                        arr[j] = arr[j + 1]
+                        arr[j + 1] = a
+                    }
+                }
+            }
+            return arr.join(",")
+        }
+        let sum = tangDan([3, 5, 4, 3, 4, 5, 6, 7, 8, 1, 2, 4, 5, 4])
+        console.log(sum);
+    </script> -->
+
+    <!-- <script>
+        function kyTu(arr, b) {
+            let flag = false
+            let count = 0
+            for (i = 0; i <= arr.length; i++) {
+                if (arr[i] == b) {
+                    count++
+                    flag = true
+                }
+            }
+            if (flag) {
+                return count
+
+            } else {
+                return -1
+            }
+        }
+
+        console.log(kyTu(["a", "b", "c", "d", "a", "a"], "a"));
+    </script> -->
+    <!-- <script>
+        function kiemTraSnt(a) {
+            let flag = false
+            for (let i = 2; i < a; i++) {
+                if (a % 2 === 0) {
+                    flag = true
+                    break;
+                }
+            }
+            if (!flag) {
+                return (`la snt`)
+            } else {
+                return (`k la snt`)
+            }
+        }
+        console.log(kiemTraSnt(3));
+    </script> -->
+
+    <!-- <script>
+        function capTong(arr) {
+            let arr1 = []
+            for (let i = 1; i <= arr.length; i++) {
+                for (let j = 1; j <= arr.length; j++) {
+                    if (i + j === 10) {
+                        arr1.push([i, j])
+                    }
+                }
+            }
+            return arr1
+
+        }
+        let tong = capTong([1, 2, 3, 4, 5, 6, 7, 8, 9])
+        console.log(tong);
+    </script> -->
+
+    <!-- <script>
+        function tangDan(arr) {
+            for (let i = 0; i < arr.length - 1; i++) {
+                for (let j = 0; j < arr.length - 1 - i; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        let a = arr[j]
+                        arr[j] = arr[j + 1]
+                        arr[j + 1] = a
+                    }
+                }
+            }
+            return arr.join(",")
+        }
+        let tong = tangDan([9, 4, 4, 5, 6, 4, 3, 5, 6, 6, 4, 4, 3])
+        console.log(tong);
+    </script> -->
+
+    <input type="text" name="" id="input">
+    <button onclick="handleSubmit()">submid</button>
+    <script>
+        // Bài 4: Cho người dùng nhập vào chuỗi kí tự.Viết hàm kiểm tra xem tần suất xuất hiện của mỗi ký tự và in ra chúng
+
+        //     Input: “Hello World”
+
+        //nhập vào 1 chuỗi
+        function handleSubmit() {
+            //llấy ra chuỗi hoạc lấy ra giá trị
+            let value = document.getElementById("input").value;
+            console.log(value);
+            // value = value.toLowCase
+            //tạo 1 mảng để chứa danh sách các kí tự và số lần xuất hiện của nó
+            let array = [];//mảng 2 chiều kí tự sẽ lưu ở phần tử số 0 của mảng con
+            //duyệt từng kí tự của chuỗi trong ô input và kiểm tra
+            for (let i = 0; i < value.length; i++) {
+                let index = checkExistCharacter(array, value.charAt(i))
+                if (index >= 0) {//nếu kí tự thứ i tồn tại trong mảng
+                    //đã tồn tại kí tự, phải sửa số lần xuất hiện
+                    // for (let i = 0; i < array.length; i++) {
+                    //     if (array[i][0] == value.charAt(i)) {
+                    //         array[i][1] += 1;
+                    //     }
+                    array[index][1] += 1
+                } else {
+                    //chua ton tai thi them moi vao mang array 1 phan tu co so lan xuat hien la 1
+                    array.push([value.charAt(i), 1]);
+                }
+            }
+            //array=
+            for (let i = 0; i < array.length; i++) {
+                console.log(`ky tu ${array[i][0]} xuat hien ${array[i][1]} lan`);
+            }
+        }
+
+        //kiểm tra tồn tại của kí tự trong 1 mảng và trả về vị trí của phần tử tồn tại ,nếu không thì trả về 1
+        function checkExistCharacter(arr, char) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i][0] == char) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+    </script>
+
+    <!-- //hệ thống lại mảng
+    //1 mảng có 2 thành phần vị trí (index) phần tử(element)
+    //truy xuất, lấy ra 1 phần tử của mảng array tại vị trí index:
+    //array [index](tương tác 2 chiều):có nghĩa là có thể thay đổi giá trị bằng phép gán
+    //duyệt mảng :có 3 cách for in ,for of,for i
+    //các phương thức chính của mảng :push(),pop(),indexOf(element),sort(function),splice()
+    //splice vừa xóa vừa thêm phân tử
+    //let arrInt=[1,2,3,4,5,6]
+    //arrInt.splice(2,3,20,30,40)//1,2,20,30,40 
+    //mảng nhiều chiều:trong mảng có
+-->
+
+
+</body>
+
+</html>

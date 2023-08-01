@@ -134,7 +134,7 @@
 // function tong(arr) {
 //     let arr1 = []
 //     for (let i = 1; i <= arr.length; i++) {
-//         for (let j = 1; i <= arr.length; i++) {
+//         for (let j = 1; j <= arr.length; j++) {
 //             if (i + j === 10) {
 //                 arr1.push([i, j])
 //             }
@@ -166,7 +166,7 @@
 // console.log(sapXep(4, 2, 1).sort((a, b) => a - b))
 
 // // Bài 7: Viết chương trình tạo hàm để kiểm tra xem năm người dùng nhập vào có phải năm nhuận không
-// 
+//
 //function kiemTra(year) {
 //     if (year % 4 === 0 && year % 100 != 0 || year % 400 == 0) {
 //         return true
@@ -183,34 +183,144 @@
 // Input: “Hello World”
 
 // Output:
-let chuoi = prompt("Nhập vào chuỗi ký tự bất kì:"); // nhap chuoi minh can
-let chuDaXet = []; // mang luu cac chu minh da dem so lan cho no
-function countRepeat(chu) {
+// let chuoi = prompt("Nhập vào chuỗi ký tự bất kì:"); // nhap chuoi minh can
+// let chuDaXet = []; // mang luu cac chu minh da dem so lan cho no
+// function countRepeat(chu) {
 
-    for (i = 0; i < chuDaXet.length; i++) {
-        if (chu == chuDaXet[i]) {
-            return;
+//     for (i = 0; i < chuDaXet.length; i++) {
+//         if (chu == chuDaXet[i]) {
+//             return;
+//         }
+//     }
+
+//     let count = 0;
+//     for (i = 0; i < chuoi.length; i++) {
+//         if (chu == chuoi[i]) {
+//             count++;
+//         }
+//     }
+//     chuDaXet.push(chu);
+//     return count;
+// }
+
+
+// for (let i = 0; i < chuoi.length; i++) {
+//     let count = countRepeat(chuoi[i]);
+
+//     if (count != undefined) {
+//         console.log(`Chu ${chuoi[i]} xuat hien ${count} lan`);
+//     }
+// }
+class Mobile {
+    constructor() {
+        this.battery = 100;
+        this.isPowerOn = false;
+        this.messageDraft = "";
+        this.inbox = [];
+        this.sent = [];
+    }
+
+    checkPower() {
+        return this.isPowerOn;
+    }
+
+    turnOn() {
+        if (this.battery > 0) {
+            this.isPowerOn = true;
+        } else {
+            console.log("Pin yếu, hãy sạc pin!");
         }
     }
 
-    let count = 0;
-    for (i = 0; i < chuoi.length; i++) {
-        if (chu == chuoi[i]) {
-            count++;
+    turnOff() {
+        this.isPowerOn = false;
+    }
+
+    chargeBattery() {
+        if (this.battery < 100) {
+            this.battery += 10;
+            if (this.battery > 100) {
+                this.battery = 100;
+            }
+            console.log("Đang xạc pin, pin hiện tại: " + this.battery + "%");
+        } else {
+            console.log("Pin đã đầy!");
         }
     }
-    chuDaXet.push(chu);
-    return count;
-}
 
-
-for (let i = 0; i < chuoi.length; i++) {
-    let count = countRepeat(chuoi[i]);
-
-    if (count != undefined) {
-        console.log(`Chu ${chuoi[i]} xuat hien ${count} lan`);
+    composeMessage(message) {
+        if (this.isPowerOn) {
+            this.messageDraft = message;
+            this.battery -= 1;
+            console.log("Đã soạn tin nhắn: " + this.messageDraft);
+        } else {
+            console.log("Điện thoại chưa được bật!");
+        }
     }
+
+    receiveMessage(message) {
+        if (this.isPowerOn) {
+            this.inbox.push(message);
+            this.battery -= 1;
+            console.log("Đã nhận tin nhắn mới!");
+        } else {
+            console.log("Điện thoại chưa được bật!");
+        }
+    }
+
+    sendMessage(message, mobile) {
+        if (this.isPowerOn) {
+            mobile.receiveMessage(message);
+            this.sent.push(message);
+            this.battery -= 1;
+            console.log("Đã gửi tin nhắn!");
+        } else {
+            console.log("Điện thoại chưa được bật!");
+        }
+    }
+
+    viewInbox() {
+        if (this.isPowerOn) {
+            console.log("Hộp thư đến:");
+            for (let i = 0; i < this.inbox.length; i++) {
+                console.log(i + 1 + ". " + this.inbox[i]);
+            }
+            this.battery -= 1;
+        } else {
+            console.log("Điện thoại chưa được bật!");
+        }
+    }
+
+    viewSent() {
+        if (this.isPowerOn) {
+            console.log("Tin nhắn đã gửi:");
+            for (let i = 0; i < this.sent.length; i++) {
+                console.log(i + 1 + ". " + this.sent[i]);
+            }
+            this.battery -= 1;
+        } else {
+            console.log("Điện thoại chưa được bật!");
+        }
+    }
+
 }
+// Khởi tạo hai đối tượng điện thoại
+const nokia = new Mobile();
+// constTiếp tục kịch bản:
+
+//```javascript
+const iphone = new Mobile();
+
+// Bật điện thoại Nokia
+nokia.turnOn();
+
+// Soạn tin nhắn và gửi tới iPhone
+nokia.composeMessage("Chào iPhone, đây là Nokia!");
+nokia.sendMessage(nokia.messageDraft, iphone);
+
+// Kiểm tra inbox của iPhone
+iphone.viewInbox();
+
 
 
 
